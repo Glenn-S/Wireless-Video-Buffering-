@@ -1,0 +1,45 @@
+CPSC 441, Assignment 3
+Glenn Skelton
+
+Observations and Recommendations:
+
+In the first test case, I choose to use a range of values between a 
+packet buffer size of 10 up to a packet size of 1000. Aside from the 
+values 10, 50, and 100, I choose to make my step value increase by 
+200 packets for each test since the difference in values was much 
+more gradual after the buffer size reached 100. After obtaining my
+results from each test, I plotted on a graph my packet loss and 
+average delay to make an estimated guess as to what I considered to
+be a reasonable and acceptable tradeoff between the two. I also 
+generated a normalized graph containing both variables and, while 
+it was tempting to choose a point where the two graphs intersected, 
+I decided to move my buffer size further down the graph. This was 
+because it seemed to be more valuable to have a lower packet loss 
+than what the intersection point would have offered. I made the 
+decision that I wanted my packet loss to be below the 1% margin.
+With this and the fact that I like rounded numbers, I eventually 
+settled on choosing 200 for my variable buffer size since it met 
+the criteria which I felt were more important in this situation.
+By choosing the buffer size to be 200, I was able to obtain a packet
+loss rate of 0.84% and an average delay of 0.023 seconds which was
+a value that lay relatively in the middle of the values sampled 
+which seemed like a reasonable place to be. 
+
+When the link bandwidth was changed to 6 Mbps in the second test
+case, I was amazed at the drastic increase in packet loss. I was 
+much greater than I had anticipated considering the link speed 
+was only decreased by a little over 50%. As expected though, the
+delay increased by quite a bit due to the slow rate of the buffer
+to move packets out. I was very impressed with the performance of
+the 54 Mbps bandwidth and would recommend this choice as an upgrade
+since it had the lowest average delay and 0% packet loss. However,
+an investment like that could be rather costly. As a reasonable 
+tradeoff, the 30 Mbps test case also provided 0% packet loss rate
+and only a 0.0026 second increase in buffer delay which if it is a
+reasonably priced option would a reasonable middle of the road
+option for performance and price. I would certainly not recommend
+a bandwidth of 6 Mbps given its lousy performance and as a marginal
+improvement from the default setup provided by the employer, the 
+buffer size increase would be my second recommendation if price was
+a large deciding factor.
+
